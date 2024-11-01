@@ -1,0 +1,18 @@
+meta {
+  name: POST Attempt
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8000/api/games/1/attempts
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "attempt_code": "RBGY"
+  }
+  
+}

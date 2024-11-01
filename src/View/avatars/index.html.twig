@@ -1,0 +1,39 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Liste - {{parent()}}{% endblock %}
+{% block content %}
+  <div class="container">
+    <h1 class="display-1">Les avatars</h1>
+
+    <a href="{{ url('/avatars/ajouter') }}" class="btn btn-primary m-4">Ajouter un nouvel avatar</a>
+
+
+    {% if avatars|length == 0  %}
+    <p>Aucun avatar n'est enregistré pour le moment.</p>
+    {% endif %}
+
+    {% for avatar in avatars %}
+    <section class="row mb-3 bg-light">
+      <div class="col-md-2 position-relative">
+        <div class="avatar-operations">
+          <a href="{{ url('/avatars/éditer/' ~  avatar.id ) }}" class="text-warning">éditer</a>
+          <a href="{{ url('/avatars/effacer/' ~  avatar.id ) }}" class="text-danger">effacer</a>
+        </div>
+        {% if avatar.illustration is empty %}
+        <img src="{{ asset('/image/no-avatar.jpg') }}" class="img img-fluid w-100">
+        {% else %}
+        <img src="{{ asset('/image/avatar/' ~  avatar.illustration ) }}" class="img img-fluid w-100">
+        {% endif %}
+      </div> 
+      <div class="col-md-8">
+        <h2>{{ avatar.display_name }}</h2>
+        <p class="m-0">de {{ avatar.email }}</p>
+        <p class="m-0 text-muted fw-lighter ms-4">ajouté le
+          {{ avatar.created_at|date( 'd/m/Y' ) }}  
+          à {{ avatar.created_at|date( 'H:i' ) }}
+        </p>
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+
+{% endblock %}

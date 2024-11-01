@@ -1,0 +1,80 @@
+[2024-11-01 18:18:43]	[ALERT]	404 - commande non existante :: /api/v1/fake-datas/posts
+[2024-11-01 18:21:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'game@detailsGame',
+        2 => array(
+            'game_id' => '1',
+        ),
+    )
+    exception-line: 235
+    exception-file: 'C:\Cours MMI 3ème année\F Louet\Api Mastermind\src\Model\Model.php'
+    exception-code: 'SQLSTATE[HY000]: General error: 1 no such column: id'
+[2024-11-01 19:05:09]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'game@attempts',
+        2 => array(
+            'game_id' => '1',
+        ),
+    )
+    exception-line: 235
+    exception-file: 'C:\Cours MMI 3ème année\F Louet\Api Mastermind\src\Model\Model.php'
+    exception-code: 'SQLSTATE[HY000]: General error: 1 no such column: id'
+[2024-11-01 19:11:26]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'game@attempts',
+        2 => array(
+            'game_id' => '1',
+        ),
+    )
+    exception-line: 235
+    exception-file: 'C:\Cours MMI 3ème année\F Louet\Api Mastermind\src\Model\Model.php'
+    exception-code: 'SQLSTATE[HY000]: General error: 1 no such column: id'
+[2024-11-01 19:16:47]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'game@attempts',
+        2 => array(
+            'game_id' => '1',
+        ),
+    )
+    exception-line: 235
+    exception-file: 'C:\Cours MMI 3ème année\F Louet\Api Mastermind\src\Model\Model.php'
+    exception-code: 'SQLSTATE[HY000]: General error: 1 no such column: id'
+[2024-11-01 19:22:15]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'game@attempts',
+        2 => array(
+            'game_id' => '1',
+        ),
+    )
+    exception-line: 235
+    exception-file: 'C:\Cours MMI 3ème année\F Louet\Api Mastermind\src\Model\Model.php'
+    exception-code: 'SQLSTATE[HY000]: General error: 1 no such column: id'
+[2024-11-01 19:22:16]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'game@attempts',
+        2 => array(
+            'game_id' => '1',
+        ),
+    )
+    exception-line: 235
+    exception-file: 'C:\Cours MMI 3ème année\F Louet\Api Mastermind\src\Model\Model.php'
+    exception-code: 'SQLSTATE[HY000]: General error: 1 no such column: id'
+[2024-11-01 19:23:23]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'game@attempts',
+        2 => array(
+            'game_id' => '1',
+        ),
+    )
+    exception-line: 235
+    exception-file: 'C:\Cours MMI 3ème année\F Louet\Api Mastermind\src\Model\Model.php'
+    exception-code: 'SQLSTATE[HY000]: General error: 1 no such column: id'
+[2024-11-01 19:45:01]	[ALERT]	404 - commande non existante :: //api/games/3
+[2024-11-01 19:50:42]	[ALERT]	404 - commande non existante :: //api/games/3

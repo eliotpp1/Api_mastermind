@@ -1,0 +1,63 @@
+
+{% extends 'layout.html.twig' %}
+{% block title %}ajouter - {{ parent }}{% endblock %}
+{% block content %}
+
+ <div class="container">
+    <h1>Éditer un avatar</h1>
+    <form action="{{ url('/avatars/éditer/' ~ avatar.id) }}" method="post" class="w-50" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label">Email <span class="required-info">*</span> :</label>
+        <input name="email" type="email" value="{{ avatar.email }}" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Mot de passe <span class="required-info">*</span> :</label>
+        <input name="password" type="password" class="form-control w-50">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nom à afficher <span class="required-info">*</span> :</label>
+        <input name="display_name" type="text" value="{{ avatar.display_name }}" class="form-control w-50"
+          required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Image de l'avatar :</label>
+        <input name="illustration" type="file" class="form-control">
+        <img src="{{ asset('/image/avatar/' ~ avatar.illustration) }}" id="illustration_preview" class="img-fluid">
+      </div>
+      <p class="text-danger fs-6">Les données marquées d'une astérisque sont obligatoires.</p>
+      <button type="submit" class="btn btn-primary">Mettre à jour cet avatar</button>
+      <a href="/" class="btn btn-link text-black">annuler</a>
+    </form>
+
+  </div>
+{% endblock %}
+
+{% block js %}
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // chercher une nouvelle image
+    document.querySelector('[name="illustration"]').addEventListener('change', function() {
+      // récupérer l'objet File
+      const file = this.files[0];
+      // compléter ici pour tester le type du fichier sélectionné
+      // et afficher un éventuel message d'erreur
+      if (file.type != 'image/webp') {
+        alert(`le format de votre image (${file.type}) n'est pas correct`)
+      }
+
+      // récupérer le contenu de l'image
+      let reader = new FileReader();
+      reader.readAsDataURL(file);
+      // attendre que le contenu de l'image soit totalement chargé
+      reader.onload = function(e) {
+        // le contenu binaire de l'image est disponible dans e.target.result
+        document.querySelector('#illustration_preview').src = e.target.result;
+        document.querySelector('#illustration_preview').classList.remove('d-none');
+      }
+
+    });
+
+  })
+  </script>
+  {% endblock %}
