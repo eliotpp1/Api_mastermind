@@ -43,7 +43,7 @@ class Model
 
                 // affichage d'un message résumé en couleur
                 echo '<div style="font-size: 22px;color: red;padding: 2rem">';
-                echo "<h1>ERREUR</h1><p>{$e->getMessage()}</p>";
+                echo "<h1>ERREUR</h1><p>[{$e->getCode()}] : {$e->getMessage()}, ligne {$e->getLine()} dans le fichier {$e->getFile()}";
                 // si on ne veut pas donner trop de détail à l'internaute, alors on peut écrire
                 // echo "<h1>ERREUR</h1></p>";
                 echo '</div>';

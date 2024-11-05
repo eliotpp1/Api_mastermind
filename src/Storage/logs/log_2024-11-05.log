@@ -1,0 +1,46 @@
+[2024-11-05 11:35:20]	[ALERT]	404 - commande non existante :: /api/v1/fake-datas/posts
+[2024-11-05 11:44:52]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'game@create',
+        2 => array(),
+    )
+    exception-line: 78
+    exception-file: 'C:\Cours MMI 3ème année\F Louet\Mastermind\Api_Mastermind\src\Controller\GameController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2024-11-05 11:45:23]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'game@create',
+        2 => array(),
+    )
+    exception-line: 78
+    exception-file: 'C:\Cours MMI 3ème année\F Louet\Mastermind\Api_Mastermind\src\Controller\GameController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2024-11-05 21:27:46]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'game@create',
+        2 => array(),
+    )
+    exception-line: 78
+    exception-file: 'C:\Cours MMI 3ème année\F Louet\Mastermind\Api_Mastermind\src\Controller\GameController.php'
+    exception-code: 'Undefined array key "player_name"'
+[2024-11-05 21:30:06]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'game@create',
+        2 => array(),
+    )
+    exception-line: 78
+    exception-file: 'C:\Cours MMI 3ème année\F Louet\Mastermind\Api_Mastermind\src\Controller\GameController.php'
+    exception-code: 'Undefined array key "player_name"'
+[2024-11-05 21:30:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'game@create',
+        2 => array(),
+    )
+    exception-line: 78
+    exception-file: 'C:\Cours MMI 3ème année\F Louet\Mastermind\Api_Mastermind\src\Controller\GameController.php'
+    exception-code: 'Undefined array key "player_name"'

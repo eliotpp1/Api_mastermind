@@ -11,6 +11,20 @@ use App\Model\Attempt;
 class GameController extends Controller
 {
 
+    /**
+     * Test de mise en place de la route
+     * @route [get] /
+     */
+    public function index()
+    {
+        $this->options();
+
+        echo json_encode([
+            'status' => 200,
+            'message' => 'Welcome to the Mastermind API'
+        ]);
+    }
+
 
 
     /**
@@ -46,7 +60,6 @@ class GameController extends Controller
      */
     public function create()
     {
-
         $this->options();
 
         // Couleurs disponibles pour le code secret
@@ -60,21 +73,32 @@ class GameController extends Controller
 
         $input = json_decode(file_get_contents('php://input'), true);
 
-        if (Game::getInstance()->create([
+        // Créer le jeu et récupérer le game_id
+        $gameId = Game::getInstance()->create([
             'player_name' => $input['player_name'],
             'secret_code' => $secretCode,
             'attempts_remaining' => $input['attempts_remaining'],
             'status' => 'en cours',
             'created_at' => date('Y-m-d H:i:s')
-        ])) {
-            HTTP::error(
+        ]);
+
+        if ($gameId) {
+            // Retourner le game_id avec le message de succès
+            HTTP::success(
                 201,
-                'Game created successfully with secret code: ' . $secretCode
+                [
+                    'message' => 'Game created successfully.',
+                    'game_id' => $gameId,
+                    'attempts_remaining' => $input['attempts_remaining'], // Ajout du nombre de tentatives restantes
+                    'secret_code' => $secretCode // Optionnel
+                ]
             );
         } else {
             HTTP::error(400, 'Game not created');
         }
     }
+
+
 
 
     /**

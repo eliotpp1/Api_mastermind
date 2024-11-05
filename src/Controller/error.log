@@ -1,0 +1,27 @@
+2024-11-04 13:23:43 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:23:10 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:23:05 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:18:45 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:18:41 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:18:41 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:18:41 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:18:40 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:18:32 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:17:49 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:16:23 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:16:20 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:16:01 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:15:58 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:15:52 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:15:33 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:15:32 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:15:30 L177 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Call to a member function display() on null
+2024-11-04 13:15:29 L55 /home/epouplier/Api_Mastermind/src/bootstrap.php:: Uncaught Whoops\Exception\ErrorException: file_get_contents(/home/epouplier/www/Mastermind/error.log): Failed to open stream: No such file or directory in /home/epouplier/Api_Mastermind/src/bootstrap.php:55
+Stack trace:
+#0 [internal function]: Whoops\Run->handleError(2, 'file_get_conten...', '/home/epouplier...', 55)
+#1 /home/epouplier/Api_Mastermind/src/bootstrap.php(55): file_get_contents('/home/epouplier...')
+#2 /home/epouplier/Api_Mastermind/vendor/filp/whoops/src/Whoops/Handler/CallbackHandler.php(50): {closure}(Object(Error), Object(Whoops\Exception\Inspector), Object(Whoops\Run))
+#3 /home/epouplier/Api_Mastermind/vendor/filp/whoops/src/Whoops/Run.php(398): Whoops\Handler\CallbackHandler->handle(Object(Error))
+#4 [internal function]: Whoops\Run->handleException(Object(Error))
+#5 {main}
+  thrown

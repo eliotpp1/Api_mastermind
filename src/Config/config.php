@@ -17,11 +17,11 @@
 // On détecte le local car l'IP de la machine est 127.0.0.1
 $is_localhost = ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' or $_SERVER['REMOTE_ADDR'] == '::1');
 if ($is_localhost) {
-    require 'config.local.php';
-    define('APP_MODE', 'dev');
+  require 'config.local.php';
+  define('APP_MODE', 'dev');
 } else {
-    require 'config.prod.php';
-    define('APP_MODE', 'prod');
+  require 'config.prod.php';
+  define('APP_MODE', 'prod');
 }
 
 /** Séparateur entre dossiers qui correspond à \ sur un windows ou / sur un linux */
@@ -47,8 +47,7 @@ define('APP_DEBUG_FILE_PATH', APP_STORAGE_DIRECTORY . 'logs');
 
 /** URL complète de l'application en http:// ou https:// */
 define(
-    'APP_ROOT_URL_COMPLETE',
-    isset($_SERVER['REQUEST_SCHEME']) ? $_SERVER['REQUEST_SCHEME'] . "://{$_SERVER['HTTP_HOST']}" . APP_ROOT_URL :
-  (strpos($_SERVER['SERVER_PROTOCOL'], 'HTTP/') !== false ? 'http' : 'https') .
-  "://{$_SERVER['HTTP_HOST']}" . APP_ROOT_URL
+  'APP_ROOT_URL_COMPLETE',
+  isset($_SERVER['REQUEST_SCHEME']) ? $_SERVER['REQUEST_SCHEME'] . "://{$_SERVER['HTTP_HOST']}" . APP_ROOT_URL : (strpos($_SERVER['SERVER_PROTOCOL'], 'HTTP/') !== false ? 'http' : 'https') .
+    "://{$_SERVER['HTTP_HOST']}" . APP_ROOT_URL
 );
